@@ -1,0 +1,40 @@
+Exercise1
+CREATE TABLE PizzaOrders (
+  OrderID int,
+  CustomerName varchar(255),
+  PizzaType varchar(255),
+  Quantity int,
+  OrderAddress varchar(255),
+  PostalCode int,
+  Country varchar(255),
+  City varchar(255)
+  );
+
+Example2
+INSERT INTO PizzaOrders VALUES
+(1, 'John Smith', 'Margherita', 2, '123 Main St', 10115, 'Germany', 'Berlin'),
+(2, 'Maria Garcia', 'Pepperoni', 1, '456 Elm St', 80331, 'Germany', 'Munich'),
+(3, 'Ahmed Zayat', 'Veggie', 3, '789 Pine St', 60313, 'Germany', 'Frankfurt'),
+(4, 'Liu Wei', 'Hawaiian', 2, '321 Oak St', 20095, 'Germany', 'Hamburg');
+
+Example3
+SELECT * FROM PizzaOrders;
+
+Example4
+SELECT DISTINCT City FROM PizzaOrders;
+
+Example5
+SELECT * FROM PizzaOrdersORDER BY quantity ASC;
+SELECT * FROM PizzaOrdersORDER BY quantity DESC;
+
+Example6
+SELECT * FROM PizzaOrdersWHERE country = 'Germany'ORDER BY customername;
+
+Example 7
+SELECT * FROM PizzaOrders
+WHERE country = 'Germany' AND customername LIKE 'M%'
+ORDER BY customername;
+
+Example 8
+SELECT * FROM PizzaOrders
+WHERE country = 'Germany' OR country = 'Germnay';
