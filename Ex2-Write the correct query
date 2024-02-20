@@ -1,0 +1,66 @@
+Exercise-1
+CREATE TABLE Courses(
+  CourseID int,
+  CourseName varchar(255),
+  Instructor varchar(255),
+  Duration varchar(50),
+  City varchar(255)
+);
+
+Exercise-2
+INSERT INTO Courses
+VALUES
+(101, 'Java Basics', 'John Doe', '4 weeks', 'New York'),
+(102, 'Advanced Java', 'Jane Smith', '8 weeks', 'Los Angeles'),
+(103, 'Java Web Development', 'Mike Brown', '6 weeks', 'Chicago'),
+(104, 'Java for Mobile', 'Anna Johnson', '5 weeks', 'San Francisco');
+
+Exercise-3
+SELECT * FROM Courses
+WHERE City = 'Los Angeles';
+
+Exercise-4
+SELECT DISTINCT city FROM Courses;
+
+Exercise-5
+SELECT * FROM Courses
+ORDER BY courseid ASC;
+----
+SELECT * FROM Courses
+ORDER BY courseid DESC;
+
+Exercise-6
+SELECT * FROM Courses WHERE city = 'San Francicso';
+-----
+UPDATE Courses
+SET city = 'San Fransisco'
+WHERE city = 'San Francicso';
+-----
+SELECT * FROM Courses
+ORDER BY coursename;
+
+Exercise-7
+INSERT INTO Courses
+VALUES
+(105, 'Java Security', 'Sam Wilson', '7 weeks', 'Boston'),
+(106, 'Java Performance Tuning', 'Carol Danvers', '9 weeks', 'Seattle');
+
+Exercise-8
+SELECT * FROM Courses
+WHERE (duration = '5 weeks' OR duration = '6 weeks') AND (City LIKE 'New%' OR city LIKE 'San%'); 
+
+Exercise-9
+SELECT * FROM Courses
+WHERE instructor IS NULL;
+--
+SELECT * FROM Courses
+WHERE instructor IS NOT NULL;
+
+Exercise-10
+UPDATE Courses
+SET city = 'Boston'
+WHERE coursename = 'Java Web Development' AND city = 'Chicago';
+
+Exercise-11
+DELETE FROM Courses WHERE coursename = 'Java Basics';
+
